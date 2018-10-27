@@ -5,7 +5,11 @@
 class TextScramble {
     constructor(el) {
         this.el = el;
-        this.chars = 'abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!<>-_\\/[]{}—=+*&%@^?#________';
+        this.chars =
+            'abcdefghigklmnopqrstuvwxyz' +
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+            '0123456789' +
+            '!<>-_\\/[]{}—=+*&%@^?#________';
         this.update = this.update.bind(this)
     }
     setText(newText) {
@@ -55,33 +59,3 @@ class TextScramble {
         return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
 }
-
-// ——————————————————————————————————————————————————
-// Example
-// ——————————————————————————————————————————————————
-
-const phrases = [
-    '.NET',
-    'Docker',
-    'Go',
-    'Linux',
-    'JavaScript',
-    'TypeScript',
-    'Angular',
-    'Architecture'
-];
-window.onload = function() {
-    const el = document.getElementById('scrambled-text');
-    console.log(el);
-    const fx = new TextScramble(el);
-
-    let counter = 0;
-    const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-            setTimeout(next, 800)
-        });
-        counter = (counter + 1) % phrases.length
-    };
-
-    next();
-};

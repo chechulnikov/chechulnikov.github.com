@@ -19,7 +19,49 @@
 <div class="content">
     <h1>Maxim Chechulnikov</h1>
     <p>Software developer. Love math, fundamental science, music, sound production, powerlifting, traveling, nature, North, programming, web, compilers.</p>
-    <div id="scrambled-text">bbbmb</div>
+    <div id="scrambled-text">λ</div>
+    <br/>
+    <p>•</p>
+    <br/>
+    <a target="_blank" href="https://www.github.com/sunloving">GitHub</a>
+    <br/>
+    <a target="_blank" href="https://www.linkedin.com/in/maxim-chechulnikov-018b82106">LinkedIn</a>
+    <br/>
+    <a target="_blank" href="https://t.me/chechulnikov">Telegram</a>
+    <br/>
+    <a target="_blank" href="https://www.instagram.com/chechulnikov/">Instagram</a>
+    <br/>
+    <a target="_blank" href="https://twitter.com/chechulnikov">Twitter</a>
+    <br/>
+    <a target="_blank" href="mailto:ilfirin.nar@gmail.com?Subject=From%20chechulnkkov.com">Email</a>
 </div>
+<script>
+    const phrases = [
+        '.NET',
+        'C#',
+        'Go',
+        'Docker',
+        'Linux',
+        'JavaScript',
+        'TypeScript',
+        'Angular',
+        'SQL',
+        'MongoDB',
+        'Architecture',
+        'Scalability'
+    ];
+    window.onload = function() {
+        const skills = document.getElementById('scrambled-text');
+        const fx = new TextScramble(skills);
+
+        let counter = 0;
+        const next = () => {
+            fx.setText(phrases[counter]).then(() =>  setTimeout(next, 800));
+            counter = (counter + 1) % phrases.length
+        };
+
+        next();
+    };
+</script>
 </body>
 </html>

@@ -1,26 +1,21 @@
 a {
     cursor: pointer;
     text-decoration: none;
-
-    /*-o-transition: color 0.3s ease-out;*/
-    /*-ms-transition: color 0.3s ease-out;*/
-    /*-moz-transition: color 0.3s ease-out;*/
-    /*-webkit-transition: color 0.3s ease-out;*/
     transition: color 0.3s ease-out;
 }
 
 a:link {
-    color: #0091c9;
+    color: #77ff7d;
 }
 
 a:visited {
-    color: #00658c;
+    color: #77ff7d;
 }
 
 a:hover {
-    color: #7fc8e4;
+    color: #fff;
 }
 
 a:active {
-    color: #b2deee;
+    color: #fff;
 }
