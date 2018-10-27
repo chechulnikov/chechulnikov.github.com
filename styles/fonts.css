@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "f300";
+    src: url("../fonts/f300.woff") format('woff');
+}
+
+@font-face {
+    font-family: "f500";
+    src: url("../fonts/f500.woff") format('woff');
+    font-weight: bold;
+}
